@@ -71,7 +71,7 @@ class PlayerInventory extends BaseInventory{
 	 * @return unknown
 	 */
 	public function getSize() {
-		return parent::getSize() - 13; //Remove armor slots + 9 hotbar slots
+		return parent::getSize() - 4; //Remove armor slots
 	}
 
 
@@ -80,7 +80,7 @@ class PlayerInventory extends BaseInventory{
 	 * @param int     $size
 	 */
 	public function setSize(int $size) {
-		parent::setSize($size + 13);
+		parent::setSize($size + 4);
 		$this->sendContents($this->getViewers());
 	}
 
